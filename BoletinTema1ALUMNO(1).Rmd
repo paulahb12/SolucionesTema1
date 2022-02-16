@@ -206,15 +206,28 @@ head(libReturn$results, n= 5)
 
 ```{r}
 
+head(cabbages)
+dim(cabbages)
+tail(cabbages)
+str(cabbages)
+#dicho conjunto de datos contiene 60 registros y 4 variables
+
+any(is.na(cabbages))
+#no contiene ningún valor perdido
 
 
+head(Chile)
+dim(Chile)
+tail(Chile)
+str(Chile)
+#dicho conjunto de datos contiene 2700 registros y 8 variables
 
+any(is.na(Chile))
+#contiene ningún valor perdido
+colSums(sapply(Chile, is.na))
 
-
-
-
-
-
+summary(cabbages)
+summary(Chile)
 
 
 
