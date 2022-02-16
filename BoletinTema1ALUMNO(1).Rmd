@@ -185,6 +185,11 @@ qqPlot(log(Animals2$brain))
 
     ```{r}
 
+libReturn <- library()
+libReturn
+length(libReturn)
+#tres librerias instaladas
+head(libReturn$results, n= 5)
 
 
 
