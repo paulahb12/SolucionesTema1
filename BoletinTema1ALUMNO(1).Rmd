@@ -251,7 +251,9 @@ summary(Chile)
 
 ```{r}
 
-
+qqPlot(cabbages$HeadWt)
+qqPlot(cabbages$VitC)
+#podríamos decir que no siguen una distribución Gaussiana
 
 
 
