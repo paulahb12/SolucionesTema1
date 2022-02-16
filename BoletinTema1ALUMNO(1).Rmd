@@ -93,18 +93,34 @@ c.  Muestra los nombres de las filas y las columnas (**rownames**, **colnames**)
 
 ```{r}
 
+MASS :: mammals
+robustbase :: Animals2
+
+data(mammals)
+data(Animals2)
 
 
+dim(mammals)
+head(mammals)
+tail(mammals)
+str(mammals)
+#dicho conjunto de datos contiene 62 registros y 2 variables
 
+dim(Animals2)
+head(Animals2)
+tail(Animals2)
+str(Animals2)
+#dicho conjunto de datos contiene 65 registros y 2 variables
 
+colnames(mammals)
+#2 columnas(variables) body brain
+rownames(mammals)
+#62 filas
 
-
-
-
-
-
-
-
+colnames(Animals2)
+#2 columnas(variables) body brain
+rownames(Animals2)
+#65 filas
 
 
 
@@ -114,8 +130,10 @@ c.  Muestra los nombres de las filas y las columnas (**rownames**, **colnames**)
 d.  Usa la función **intersect** y almacena en la variable *commonAnimals* los aminales que aparezcan en ambos conjuntos
 
 ```{r}
-
-
+d_frameM <- mammals
+d_frameA <- Animals2
+commonAnimals <- intersect(d_frameM, d_frameA)
+rownames(commonAnimals)
 
 
 
@@ -126,8 +144,14 @@ e.  Usa **setdiff** para averiguar qué animales no están en ambos conjuntos. �
 
 ```{r}
 
+animales_diferentes_M <- setdiff(rownames(d_frameM), rownames(d_frameA))
+animales_diferentes_M
+#Animales que estan solo en el conjunto de datos mammals 
 
 
+animales_diferentes_A <- setdiff(rownames(d_frameA), rownames(d_frameM))
+animales_diferentes_A
+#Animales que estan solo en el conjunto de datos Animals2
 
 
 
@@ -137,14 +161,7 @@ e.  Determina las diferencia entre los animales que no aparecen en ambos conjunt
 
 ```{r}
 
-
-
-
-
-
-
-
-
+#hay ciertos animales que se considerarían repetidos en ambos conjuntos, no obstante al no estar escritos igual no son identificados como iguales
 
 
 
